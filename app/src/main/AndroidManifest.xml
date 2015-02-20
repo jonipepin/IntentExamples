@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.usna.mobileos.intentsexample"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="16" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:icon="@drawable/cs_logo"
+        android:label="@string/app_name" >
+        <activity
+            android:label="@string/app_name"
+            android:name="edu.usna.mobileos.intentsexample.IntentsActivity" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+
+
+        <activity android:name="edu.usna.mobileos.intentsexample.MyBrowserActivity"
+                  android:label="Pep-Browser">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="edu.usna.mobileos.MyBrowser" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="edu.usna.mobileos.Apps" />
+                <category android:name="edu.usna.mobileos.OtherApps" />
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        
+        <!--  
+        <activity android:name=".MyBrowserActivity"
+                  android:label="Pep-Browser">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="edu.usna.mobileos.intentsexample.MyBrowser" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        -->
+        
+        
+        
+            
+    </application>
+
+</manifest>
